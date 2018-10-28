@@ -54,9 +54,7 @@ RDEFS = 256.rdef
 #	- 	if your library does not follow the standard library naming scheme,
 #		you need to specify the path to the library and it's name.
 #		(e.g. for mylib.a, specify "mylib.a" or "path/mylib.a")
-LIBS =  /boot/system/lib/libbe.so \
-	/boot/system/lib/libroot.so \
-	/boot/system/lib/libsupc++.so
+LIBS =  be $(STDCPPLIBS)
 
 #	Specify additional paths to directories following the standard libXXX.so
 #	or libXXX.a naming scheme. You can specify full paths or paths relative
@@ -68,11 +66,7 @@ LIBPATHS =
 #	Additional paths to look for system headers. These use the form
 #	"#include <header>". Directories that contain the files in SRCS are
 #	NOT auto-included here.
-SYSTEM_INCLUDE_PATHS =  /boot/develop/headers/be \
-			/boot/develop/headers/cpp \
-			/boot/develop/headers/posix \
-			/boot/develop/lib \
-			/boot/beos/system/lib
+SYSTEM_INCLUDE_PATHS = 
 
 #	Additional paths paths to look for local headers. These use the form
 #	#include "header". Directories that contain the files in SRCS are
